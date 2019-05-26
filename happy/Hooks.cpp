@@ -743,8 +743,8 @@ void __fastcall Hooks::PaintTraverse(PVOID pPanels, int edx, unsigned int vguiPa
 			g_pSurface->FilledRect(x, y, 237, 22, Color(35, 35, 35));
 			g_pSurface->OutlinedRect(x, y, 237, 22, Color(0, 0, 0));
 
-			g_pSurface->draw_text(x + 5, y + 3, g::misc_font, "polia", false, Color(215, 215, 215));
-			g_pSurface->draw_text(x + 33, y + 3, g::misc_font, "cheat", false, menurgba);
+			g_pSurface->draw_text(x + 5, y + 3, g::misc_font, "happy", false, Color(215, 215, 215));
+			g_pSurface->draw_text(x + 33, y + 3, g::misc_font, "hack", false, menurgba);
 			g_pSurface->draw_text(x + 68, y, g::tab_font, "|", false, Color(215, 215, 215));
 
 			time_t now = time(0);
