@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{1B8103F7-F793-47B0-9FBE-44EC66BC319D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>happy</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <ProjectName>happy</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</IntDir>
+    <ExecutablePath>$(VC_ExecutablePath_x86);$(WindowsSDK_ExecutablePath);$(VS_ExecutablePath);$(MSBuild_ExecutablePath);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);$(ExecutablePath);$(DXSDK_DIR)Utilities\bin\x86</ExecutablePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(IncludePath);$(DXSDK_DIR)Include</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86;$(LibraryPath);$(DXSDK_DIR)Lib\x86</LibraryPath>
+    <TargetName>hvh</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>.\build</OutDir>
+    <IntDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</IntDir>
+    <ExecutablePath>$(VC_ExecutablePath_x86);$(WindowsSDK_ExecutablePath);$(VS_ExecutablePath);$(MSBuild_ExecutablePath);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);$(ExecutablePath);$(DXSDK_DIR)Utilities\bin\x86</ExecutablePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(IncludePath);$(DXSDK_DIR)Include;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86;$(LibraryPath);$(DXSDK_DIR)Lib\x86</LibraryPath>
+    <TargetName>csgo-cheat</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;ANTARIO_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <MapExports>true</MapExports>
+      <AssemblyDebug>true</AssemblyDebug>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;ANTARIO_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <StringPooling>
+      </StringPooling>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableParallelCodeGeneration>
+      </EnableParallelCodeGeneration>
+      <RuntimeTypeInfo>
+      </RuntimeTypeInfo>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <AdditionalOptions>
+      </AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <PerUserRedirection>false</PerUserRedirection>
+      <MapExports>true</MapExports>
+      <AssemblyDebug>true</AssemblyDebug>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="happy\Features\Aimbot\backtacking.cpp" />
+    <ClCompile Include="happy\Features\Aimbot\Legitbot.cpp" />
+    <ClCompile Include="happy\Features\Logs\Event Logs.cpp" />
+    <ClCompile Include="happy\Features\Aimbot\Aimbot.cpp" />
+    <ClCompile Include="happy\Features\Aimbot\Autowall.cpp" />
+    <ClCompile Include="happy\Features\Aimbot\LagComp.cpp" />
+    <ClCompile Include="happy\Features\AntiAim\AntiAim.cpp" />
+    <ClCompile Include="happy\Features\Misc\dots.cpp" />
+    <ClCompile Include="happy\Features\Misc\skinchanger.cpp" />
+    <ClCompile Include="happy\Features\Resolver\Resolver.cpp" />
+    <ClCompile Include="happy\Features\Visuals\chams.cpp" />
+    <ClCompile Include="happy\Hooks.cpp" />
+    <ClCompile Include="happy\DLLMain.cpp" />
+    <ClCompile Include="happy\Menu\Menu.cpp" />
+    <ClCompile Include="happy\Menu\cfgsaving.cpp" />
+    <ClCompile Include="happy\SDK\CEntity.cpp" />
+    <ClCompile Include="happy\Utils\GlobalVars.cpp" />
+    <ClCompile Include="happy\Utils\Interfaces.cpp" />
+    <ClCompile Include="happy\Utils\Math.cpp" />
+    <ClCompile Include="happy\Utils\NetvarManager.cpp" />
+    <ClCompile Include="happy\Features\Visuals\ESP.cpp" />
+    <ClCompile Include="happy\Features\Aimbot\engine_prediction.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include=".Antario\Features\Logs\Event Logs.h" />
+    <ClInclude Include="happy\Features\Aimbot\Legitbot.hpp" />
+    <ClInclude Include="happy\Features\event_man.hpp" />
+    <ClInclude Include="happy\Features\Logs\Event Logs.h" />
+    <ClInclude Include="happy\Features\Misc\dots.hpp" />
+    <ClInclude Include="happy\Features\Misc\skinchanger.hpp" />
+    <ClInclude Include="happy\Features\Visuals\chams.hpp" />
+    <ClInclude Include="happy\SDK\xostr.hpp" />
+    <ClInclude Include="happy\Utils\checksum_crc.h" />
+    <ClInclude Include="happy\Features\Aimbot\Aimbot.h" />
+    <ClInclude Include="happy\Features\Aimbot\Autowall.h" />
+    <ClInclude Include="happy\Features\Aimbot\LagComp.h" />
+    <ClInclude Include="happy\Features\AntiAim\AntiAim.h" />
+    <ClInclude Include="happy\Features\Features.h" />
+    <ClInclude Include="happy\Features\Misc\Misc.h" />
+    <ClInclude Include="happy\Features\Resolver\Resolver.h" />
+    <ClInclude Include="happy\Hooks.h" />
+    <ClInclude Include="Antario\Menu.h" />
+    <ClInclude Include="happy\Menu\Menu.h" />
+    <ClInclude Include="happy\Menu\cfgsaving.h" />
+    <ClInclude Include="happy\SDK\bspflags.h" />
+    <ClInclude Include="happy\SDK\CGlobalVarsBase.h" />
+    <ClInclude Include="happy\SDK\CHandle.h" />
+    <ClInclude Include="happy\SDK\CEntity.h" />
+    <ClInclude Include="happy\SDK\CInput.h" />
+    <ClInclude Include="happy\SDK\ClientClass.h" />
+    <ClInclude Include="happy\SDK\CModelRender.h" />
+    <ClInclude Include="happy\SDK\Hitboxes.h" />
+    <ClInclude Include="happy\SDK\ICvar.h" />
+    <ClInclude Include="happy\SDK\IEngineTrace.h" />
+    <ClInclude Include="happy\SDK\IMaterial.h" />
+    <ClInclude Include="happy\SDK\ISurface.h" />
+    <ClInclude Include="happy\SDK\ISurfaceData.h" />
+    <ClInclude Include="happy\SDK\IVModelInfo.h" />
+    <ClInclude Include="happy\SDK\IVRenderView.h" />
+    <ClInclude Include="happy\Utils\Color.h" />
+    <ClInclude Include="happy\SDK\CPrediction.h" />
+    <ClInclude Include="happy\SDK\Definitions.h" />
+    <ClInclude Include="happy\SDK\IBaseClientDll.h" />
+    <ClInclude Include="happy\SDK\IClientEntity.h" />
+    <ClInclude Include="happy\SDK\IClientEntityList.h" />
+    <ClInclude Include="happy\SDK\IClientMode.h" />
+    <ClInclude Include="happy\SDK\IClientNetworkable.h" />
+    <ClInclude Include="happy\SDK\IClientRenderable.h" />
+    <ClInclude Include="happy\SDK\IClientThinkable.h" />
+    <ClInclude Include="happy\SDK\IClientUnknown.h" />
+    <ClInclude Include="happy\SDK\IGameEvent.h" />
+    <ClInclude Include="happy\SDK\IVEngineClient.h" />
+    <ClInclude Include="happy\SDK\KeyValues.h" />
+    <ClInclude Include="happy\SDK\PlayerInfo.h" />
+    <ClInclude Include="happy\Utils\GlobalVars.h" />
+    <ClInclude Include="happy\Utils\Interfaces.h" />
+    <ClInclude Include="happy\SDK\Recv.h" />
+    <ClInclude Include="happy\SDK\Vector.h" />
+    <ClInclude Include="happy\SDK\VMatrix.h" />
+    <ClInclude Include="happy\Utils\Math.h" />
+    <ClInclude Include="happy\Utils\NetvarManager.h" />
+    <ClInclude Include="happy\Utils\SPoint.h" />
+    <ClInclude Include="happy\Utils\SRect.h" />
+    <ClInclude Include="happy\Utils\Utils.h" />
+    <ClInclude Include="happy\Features\Visuals\ESP.h" />
+    <ClInclude Include="happy\Utils\XorStr.h" />
+    <ClInclude Include="happy\Features\Aimbot\engine_prediction.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
